@@ -1,9 +1,8 @@
-  <h1>Restaurants</h1>
-
- <ul>
+<h1 class="mb-4 text-center">Restaurants 🍔🍜</h1>
+<ul class="list-group">
   <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li class="list-group-item list-group-item-action list-group-item-light"><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-dark text-decoration-none" %></li>
   <% end %>
 </ul>
 
-<%= link_to "Add a new restaurant", new_restaurant_path %>
+<%= link_to "Add a new restaurant", new_restaurant_path, class: 'btn btn-outline-dark mt-3' %>
